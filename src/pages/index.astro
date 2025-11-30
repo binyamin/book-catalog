@@ -1,7 +1,22 @@
 ---
+import { site } from '~/config';
 import Layout from '~/layouts/page.astro';
 ---
 
+<style>
+	.hero {
+		padding-block: 25vh;
+
+		& ._action {
+			padding-block-start: var(--space-3xs);
+		}
+	}
+</style>
+
 <Layout title={false}>
-	<h1>Hello World</h1>
+	<section class="hero l-center">
+		<h1>{ site.name }</h1>
+		<p>{ site.summary }</p>
+		<a href="/books" class="_action">Browse Books &rarr;</a>
+	</section>
 </Layout>
