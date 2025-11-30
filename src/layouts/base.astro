@@ -1,0 +1,23 @@
+---
+import { site } from '~/config';
+
+export interface Props {
+	title: string | false;
+	ignore?: boolean;
+}
+
+const title = [Astro.props.title || [], site.name].flat().join(' | ');
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{title}</title>
+		<link rel="icon" href="data:," />
+		{Astro.props.ignore && <meta name="robots" content="noindex" />}
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
