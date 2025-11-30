@@ -1,0 +1,28 @@
+.app {
+	padding-block: var(--space-2xs);
+
+	& ._logo {
+		color: currentColor;
+		font-size: var(--font-size-2);
+		font-weight: 700;
+		text-decoration-line: none;
+	}
+
+	& ._logo:hover {
+		color: var(--color-link);
+	}
+}
+
+.site-nav {
+	--c-gap: var(--space-s);
+
+	a {
+		color: currentColor;
+		text-decoration-line: none;
+
+		&:hover {
+			color: var(--color-link);
+			text-decoration-line: underline;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+---
+import { site } from '~/config';
+import Layout, { type Props as LayoutProps } from './base.astro';
+
+import './page.css';
+
+export interface Props extends LayoutProps {}
+---
+
+<Layout {...Astro.props}>
+	<div class="app | l-cover">
+		<header>
+			<nav class="l-sidebar $align:center">
+				<a href="/" class="_logo" aria-label="homepage">{ site.name }</a>
+
+				<ul role="list" class="site-nav l-cluster $justify:end">
+					<li>
+						<a href="/authors">Authors</a>
+					</li>
+					<li>
+						<a href="/books">Books</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main class="l-cover_target">
+			<slot />
+		</main>
+		<footer class="l-center">
+			<p>
+				Made by <a href="https://binyam.in">Binyamin Green</a>
+			</p>
+		</footer>
+	</div>
+</Layout>

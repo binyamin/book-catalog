@@ -1,3 +1,4 @@
 export const site = {
-	name: 'My App',
+	name: 'Catalog',
+	summary: 'A static showcase of authors and their books',
 };
