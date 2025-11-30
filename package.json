@@ -1,0 +1,14 @@
+{
+	"name": "nuxt-template",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"lint": "biome check",
+		"format": "biome format --write"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "~2.3.8"
+	}
+}
