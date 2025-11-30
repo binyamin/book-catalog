@@ -1,0 +1,3 @@
+.flow > * + * {
+	margin-block-start: var(--c-gap, var(--space-s));
+}

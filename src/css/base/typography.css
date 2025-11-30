@@ -1,0 +1,40 @@
+body {
+	font-family: var(--font-family-body);
+	font-size: var(--font-size-0);
+	/* To meet WCAG 2.1 AAA, spacing between lines in a
+	paragraph should be equivalent to a line-height of 1.5 */
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-family-body);
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: var(--font-size-5);
+}
+
+h2 {
+	font-size: var(--font-size-4);
+}
+
+h3 {
+	font-size: var(--font-size-3);
+}
+
+:is(ul, ol):not([role='list']) {
+	padding-inline-start: 2ch;
+}
+
+pre,
+code,
+kbd {
+	font-family: var(font-family-mono);
+	font-variant-numeric: tabular-nums;
+}

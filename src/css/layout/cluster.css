@@ -1,0 +1,31 @@
+.l-cluster {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	align-items: stretch;
+	gap: var(--c-gap, var(--space-s));
+
+	&.\$justify\:start {
+		justify-content: start;
+	}
+
+	&.\$justify\:end {
+		justify-content: end;
+	}
+
+	&.\$align\:start {
+		align-items: start;
+	}
+
+	&.\$align\:center {
+		align-items: center;
+	}
+
+	&.\$align\:end {
+		align-items: end;
+	}
+
+	&.\$align\:stretch {
+		align-items: stretch;
+	}
+}

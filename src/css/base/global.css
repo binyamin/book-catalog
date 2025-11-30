@@ -1,0 +1,18 @@
+body {
+	inline-size: clamp(20rem, 95vw, 77.5rem);
+	margin-inline: auto;
+	padding-inline: var(--space-s);
+}
+
+:focus-visible {
+	outline: max(2px, 0.15em) solid currentColor;
+	outline-offset: max(2px, 0.15em);
+}
+
+:any-link {
+	color: var(--color-link);
+
+	&:hover {
+		text-decoration-line: none;
+	}
+}

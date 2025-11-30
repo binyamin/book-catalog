@@ -1,0 +1,7 @@
+@layer config, base, layout, utility, block;
+
+@import './config.css' layer(config);
+@import './reset.css' layer(base);
+@import './base/index.css' layer(base);
+@import './layout/index.css' layer(layout);
+@import './utility/index.css' layer(utility);
