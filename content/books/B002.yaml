@@ -1,0 +1,9 @@
+id: B002
+title: A Wizard of Earthsea
+authorId: a001
+publicationYear: 1968
+genre: Fantasy
+pageCount: 205
+summary: |
+  The first book in the Earthsea series, following the adventures of the young wizard Ged as he struggles to master his magical powers.
+cover: ../assets/books/B002.jpg
