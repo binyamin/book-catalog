@@ -4,7 +4,9 @@ import Layout, { type Props as LayoutProps } from './base.astro';
 
 import './page.css';
 
-export interface Props extends LayoutProps {}
+export interface Props extends LayoutProps {
+	class?: string;
+}
 ---
 
 <Layout {...Astro.props}>
@@ -23,7 +25,7 @@ export interface Props extends LayoutProps {}
 				</ul>
 			</nav>
 		</header>
-		<main class="l-cover_target">
+		<main class:list={["l-cover_target", Astro.props.class]}>
 			<slot />
 		</main>
 		<footer class="l-center">

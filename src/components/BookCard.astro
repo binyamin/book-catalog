@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+import { type InferEntrySchema } from 'astro:content';
+
+export interface Props {
+	book: InferEntrySchema<'books'>;
+	author: InferEntrySchema<'authors'>;
+}
+
+const { author, book } = Astro.props;
+---
+
+<article>
+	<div>
+		<Image width={320} src={book.cover} alt="" />
+	</div>
+	<p>
+		<a href={"/books/" + book.id}>{book.title}</a>
+	</p>
+	<p>
+		<a href={"/authors/" + author.id}>{author.name}</a>
+	</p>
+</article>

@@ -1,0 +1,32 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import { sort, untitle } from '$lib/collections';
+import BookCard from '~/components/BookCard.astro';
+import Layout from '~/layouts/page.astro';
+
+const books = await Array.fromAsync(
+	(await getCollection('books'))
+		.sort(sort((v) => untitle(v.data.title)))
+		.map(async (v) => ({
+			book: v.data,
+			author: (await getEntry(v.data.authorId)).data,
+		})),
+);
+---
+
+<style>
+	ul {
+		--c-item-width: 10rem;
+		--c-gap: var(--space-m);
+	}
+</style>
+
+<Layout title="Books" class="flow">
+	<h1>Books</h1>
+
+	<ul class="l-grid" role="list">
+		{books.map(props => (
+			<li><BookCard {...props} /></li>
+		))}
+	</ul>
+</Layout>
