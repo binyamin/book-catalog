@@ -10,14 +10,83 @@ export interface Props {
 const { author, book } = Astro.props;
 ---
 
-<article>
-	<div>
-		<Image width={320} src={book.cover} alt="" />
-	</div>
-	<p>
+<style>
+	/*
+		[1] make card clickable
+	*/
+
+	.card {
+		border-radius: var(--radius-l);
+		margin-inline: auto;
+		max-inline-size: 20rem;
+		padding: var(--space-2xs);
+
+		position: relative; /* [1] expand hitbox */
+	}
+
+	/* [1] expand hitbox */
+	.title a::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: 10;
+		cursor: pointer;
+	}
+
+	/* [1] hover state for card */
+	.card:hover {
+		background-color: hsl(0, 0%, 90%);
+	}
+
+	/* [1] move focus ring to pseudo-element */
+	.title a:focus {
+		outline: none;
+
+		&::before {
+			border-radius: var(--radius-l);
+			outline: 2px solid currentColor;
+			outline-offset: 0;
+		}
+	}
+
+	/* [1] place secondary action above pseudo-element */
+	.detail :where(a) {
+		position: relative;
+		z-index: 20;
+	}
+
+	a {
+		color: currentColor;
+		text-decoration-line: none;
+
+		&:hover {
+			text-decoration-line: underline;
+		}
+	}
+
+	.title {
+		margin-block-start: var(--space-2xs);
+	}
+
+	.detail {
+		color: var(--text-muted);
+	}
+
+	.image {
+		border: 1px solid hsl(0, 0%, 90%);
+		border-radius: var(--radius-l);
+		block-size: auto;
+		aspect-ratio: 2 / 3;
+		object-fit: cover;
+	}
+</style>
+
+<article class="card">
+	<Image class="image" width={320} src={book.cover} alt="" />
+	<p class="title">
 		<a href={"/books/" + book.id}>{book.title}</a>
 	</p>
-	<p>
+	<p class="detail">
 		<a href={"/authors/" + author.id}>{author.name}</a>
 	</p>
 </article>
