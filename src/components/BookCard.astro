@@ -73,6 +73,7 @@ const { author, book } = Astro.props;
 	}
 
 	.image {
+		background-color: hsl(0, 0%, 90%);
 		border: 1px solid hsl(0, 0%, 90%);
 		border-radius: var(--radius-l);
 		block-size: auto;
@@ -81,7 +82,7 @@ const { author, book } = Astro.props;
 	}
 </style>
 
-<article class="card">
+<li class="card">
 	<Image class="image" width={320} src={book.cover} alt="" />
 	<p class="title">
 		<a href={"/books/" + book.id}>{book.title}</a>
@@ -89,4 +90,4 @@ const { author, book } = Astro.props;
 	<p class="detail">
 		<a href={"/authors/" + author.id}>{author.name}</a>
 	</p>
-</article>
+</li>

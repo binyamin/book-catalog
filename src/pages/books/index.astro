@@ -25,8 +25,6 @@ const books = await Array.fromAsync(
 	<h1>Books</h1>
 
 	<ul class="l-grid" role="list">
-		{books.map(props => (
-			<li><BookCard {...props} /></li>
-		))}
+		{books.map(props => <BookCard {...props} />)}
 	</ul>
 </Layout>
