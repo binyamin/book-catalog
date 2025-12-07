@@ -5,12 +5,13 @@ import Layout from '~/layouts/page.astro';
 
 <style>
 	.hero {
+		text-align: center;
 		padding-block: 25vh;
 	}
 </style>
 
 <Layout title={false}>
-	<section class="hero l-center">
+	<section class="hero">
 		<h1>{ site.name }</h1>
 		<p>{ site.summary }</p>
 		<a href="/books">Browse Books &rarr;</a>
