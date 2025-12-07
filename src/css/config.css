@@ -1,6 +1,12 @@
 :root {
-	--font-family-body: ui-sans-serif, system-ui, sans-serif;
-	--font-family-display: ui-serif, serif;
+	/* Font stack are from http://modernfontstacks.com */
+	/* Humanist font stack */
+	--font-family-body:
+		Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro,
+		sans-serif;
+	/* Transitional font stack */
+	--font-family-display:
+		Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 
 	/* Font & Space Scales
 		width: 320px / 1240px
