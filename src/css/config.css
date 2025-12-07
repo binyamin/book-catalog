@@ -1,5 +1,6 @@
 :root {
 	--font-family-body: ui-sans-serif, system-ui, sans-serif;
+	--font-family-display: ui-serif, serif;
 
 	/* Font & Space Scales
 		width: 320px / 1240px
