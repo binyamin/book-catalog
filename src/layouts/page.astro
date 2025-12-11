@@ -12,18 +12,7 @@ export interface Props extends LayoutProps {
 <Layout {...Astro.props}>
 	<div class="app | l-cover">
 		<header>
-			<nav class="l-sidebar $align:center">
-				<a href="/" class="_logo" aria-label="homepage">{ site.name }</a>
-
-				<ul role="list" class="site-nav l-cluster $justify:end">
-					<li>
-						<a href="/authors">Authors</a>
-					</li>
-					<li>
-						<a href="/books">Books</a>
-					</li>
-				</ul>
-			</nav>
+			<a href="/" class="_logo" aria-label="homepage">{ site.name }</a>
 		</header>
 		<main class:list={["l-cover_target", Astro.props.class]}>
 			<slot />
