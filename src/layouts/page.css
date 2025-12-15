@@ -1,5 +1,8 @@
 .app {
+	inline-size: clamp(20rem, 95vw, 77.5rem);
+	margin-inline: auto;
 	padding-block: var(--space-2xs);
+	padding-inline: var(--space-s);
 
 	& ._logo {
 		color: currentColor;
