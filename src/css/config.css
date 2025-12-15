@@ -45,4 +45,8 @@
 	--color-brown-600: hsl(25, 40%, 48%);
 
 	--color-link: var(--color-green-600);
+
+	--container-l: clamp(20rem, 90vw, 77.5rem);
+	--container-m: clamp(20rem, 90vw, 60rem);
+	--container-s: clamp(20rem, 90vw, 48rem);
 }
