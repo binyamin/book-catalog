@@ -15,4 +15,5 @@
 @import './composition/stack.css' layer(composition);
 
 @import './utility/container.css' layer(utility);
+@import './utility/spacing.css' layer(utility);
 @import './utility/visually-hidden.css' layer(utility);

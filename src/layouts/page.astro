@@ -1,0 +1,46 @@
+---
+import { site } from '~/config';
+import Layout, { type Props as LayoutProps } from './base.astro';
+
+export interface Props extends LayoutProps {}
+---
+
+<style>
+	.app {
+		--container-max-width: var(--container-m);
+	}
+
+	.logo {
+		color: currentColor;
+		font-size: var(--font-size-l);
+		font-weight: 700;
+		text-decoration-line: none;
+
+		&:hover {
+			color: var(--color-text-link);
+		}
+	}
+
+	.hr {
+		height: 1px;
+		width: 100%;
+		background-color: var(--color-neutral-200);
+	}
+</style>
+
+<Layout {...Astro.props}>
+	<div class="app | cover | container">
+		<header>
+			<div class="py-xs">
+				<a href="/" class="logo">{site.name}</a>
+			</div>
+			<div class="hr"></div>
+		</header>
+		<main class="cover_target">
+			<slot />
+		</main>
+		<footer class="center | py-xs">
+			<p>Made by <a href="https://binyam.in">Binyamin Green</a></p>
+		</footer>
+	</div>
+</Layout>
