@@ -4,7 +4,7 @@
 
 :root {
 	--font-family-body: system-ui, sans-serif;
-	--font-family-heading: var(--font-family-body);
+	--font-family-display: var(--font-family-body);
 
 	--font-size-xs: clamp(0.6944rem, 0.684rem + 0.0465vw, 0.72rem);
 	--font-size-s: clamp(0.8333rem, 0.8061rem + 0.1212vw, 0.9rem);
