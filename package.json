@@ -1,0 +1,14 @@
+{
+	"name": "astro-template",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && astro preview"
+	},
+	"dependencies": {
+		"astro": "^7.2.0"
+	}
+}
