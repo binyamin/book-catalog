@@ -1,0 +1,19 @@
+/**
+ * CONTAINER
+ * A high-level content wrapper
+ *
+ * Config:
+ * --container-max-width (none) Constrains container width
+ * --container-space (space-m) Defines the horizontal gutters
+ */
+
+.container {
+	max-inline-size: var(--container-max-width);
+	margin-inline: auto;
+	padding-inline: var(--container-space, var(--space-s));
+
+	> * {
+		--container-max-width: initial;
+		--container-space: initial;
+	}
+}

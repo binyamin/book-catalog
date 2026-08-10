@@ -49,4 +49,8 @@
 	--color-surface-base: var(--color-neutral-50);
 	--color-text-base: var(--color-neutral-900);
 	--color-text-link: var(--color-green-600);
+
+	--container-l: clamp(20rem, 90vw, 77.5rem);
+	--container-m: clamp(20rem, 90vw, 60rem);
+	--container-s: clamp(20rem, 90vw, 48rem);
 }
