@@ -1,0 +1,23 @@
+/**
+ * GRID
+ * An auto-fill grid with configurable grid item sizes
+ *
+ * Config:
+ * --grid-gap (space-s) Defines the (minimum) space between items
+ * --grid-item-min (16rem) The minimum width for each item
+ */
+
+.grid {
+	display: grid;
+	grid-template-columns:
+		repeat(
+			auto-fill,
+			minmax(var(--grid-item-min, 16rem), 1fr)
+		);
+	gap: var(--grid-gap, var(--space-s));
+
+	> * {
+		--grid-gap: initial;
+		--grid-item-min: initial;
+	}
+}
