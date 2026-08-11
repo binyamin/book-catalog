@@ -1,8 +1,20 @@
 ---
-import Layout from '~/layouts/base.astro';
+import IconRightArrow from 'microns/svg/arrow-right.svg';
+import { site } from '~/config';
+import Layout from '~/layouts/page.astro';
 ---
 
+<style>
+	.hero {
+		margin-block-start: 30vh;
+		text-align: center;
+	}
+</style>
+
 <Layout title="">
-	<h1>Project Ready</h1>
-	<p>You may now add components and start building.</p>
+	<section class="hero">
+		<h1>{site.name}</h1>
+		<p>{site.summary}</p>
+		<a href="/books">Browse Books <IconRightArrow class="icon" /></a>
+	</section>
 </Layout>
