@@ -1,3 +1,59 @@
+.p-2xs {
+	padding-block: var(--space-2xs);
+}
+
 .py-2xs {
 	padding-block: var(--space-2xs);
+}
+
+.px-2xs {
+	padding-block: var(--space-2xs);
+}
+
+.p-xs {
+	padding-block: var(--space-xs);
+}
+
+.py-xs {
+	padding-block: var(--space-xs);
+}
+
+.px-xs {
+	padding-block: var(--space-xs);
+}
+
+.p-s {
+	padding-block: var(--space-s);
+}
+
+.py-s {
+	padding-block: var(--space-s);
+}
+
+.px-s {
+	padding-block: var(--space-s);
+}
+
+.p-m {
+	padding-block: var(--space-m);
+}
+
+.py-m {
+	padding-block: var(--space-m);
+}
+
+.px-m {
+	padding-block: var(--space-m);
+}
+
+.p-l {
+	padding-block: var(--space-l);
+}
+
+.py-l {
+	padding-block: var(--space-l);
+}
+
+.px-l {
+	padding-block: var(--space-l);
 }
