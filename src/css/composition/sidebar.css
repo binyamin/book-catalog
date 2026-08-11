@@ -8,28 +8,28 @@
  */
 
 .sidebar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--sidebar-gap, var(--space-s));
-    align-items: var(--sidebar-valign, start);
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--sidebar-gap, var(--space-s));
+	align-items: var(--sidebar-valign, start);
 
-    > * {
-        --sidebar-gap: initial;
-        --sidebar-valign: initial;
-    }
+	> * {
+		--sidebar-gap: initial;
+		--sidebar-valign: initial;
+	}
 }
 
 .sidebar > :first-child {
-    flex-grow: 1;
-    flex-basis: var(--sidebar-width, content);
+	flex-grow: 1;
+	flex-basis: var(--sidebar-width, content);
 
-    > * {
-        --sidebar-width: initial;
-    }
+	> * {
+		--sidebar-width: initial;
+	}
 }
 
 .sidebar > :first-child + * {
-    flex-basis: 0;
-    flex-grow: 999;
-    min-inline-size: 50%;
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 50%;
 }
