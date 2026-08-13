@@ -1,0 +1,8 @@
+id: dune
+title: Dune
+author: frank-herbert
+genre:
+  - Science Fiction
+publicationYear: 1965
+summary: "On the desert world of Arrakis, a young nobleman is drawn into a harsh inheritance shaped by politics, prophecy, and scarce water. As House Atreides takes control of a planet rich in spice, danger gathers in every alliance and betrayal. In the endless dunes, a new destiny begins to stir.\n"
+cover: ../assets/books/jk96g.webp

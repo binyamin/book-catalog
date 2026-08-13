@@ -1,0 +1,11 @@
+id: coraline
+keys:
+  isbn: "9780063088238"
+title: Coraline
+author: neil-gaiman
+publicationYear: 2002
+genre:
+  - Fantasy
+  - Horror
+summary: "When Coraline steps through a door to find another house strangely similar to her own (only better), things seem marvelous.\n\nBut there's another mother there, and another father, and they want her to stay and be their little girl. They want to change her and never let her go.\n\nCoraline will have to fight with all her wits and courage if she is to save herself and return to her ordinary life.\n"
+cover: ../assets/books/g4T5C.webp
