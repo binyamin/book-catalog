@@ -5,6 +5,7 @@
  * Config:
  * --grid-gap (space-s) Defines the (minimum) space between items
  * --grid-item-min (16rem) The minimum width for each item
+ * --grid-valign (stretch) Controls vertical alignment for each item
  */
 
 .grid {
@@ -15,9 +16,11 @@
 			minmax(var(--grid-item-min, 16rem), 1fr)
 		);
 	gap: var(--grid-gap, var(--space-s));
+	align-items: var(--grid-valign, stretch);
 
 	> * {
 		--grid-gap: initial;
 		--grid-item-min: initial;
+		--grid-valign: initial;
 	}
 }
