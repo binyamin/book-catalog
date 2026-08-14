@@ -1,0 +1,9 @@
+id: hobbit
+title: The Hobbit
+author: jrr-tolkien
+genre:
+  - Fantasy
+publicationYear: 1937
+summary: >-
+  A quiet, unassuming hobbit named Bilbo Baggins finds his predictable life upended when the wizard Gandalf and a company of thirteen dwarves arrive at his doorstep. Swept into a perilous quest to reclaim the Lonely Mountain and its stolen treasure from the dragon Smolder, Bilbo must confront trolls, goblins, and giant spiders. Along the way, a chance encounter with a wretched creature named Gollum changes his destiny forever. It is an enchanting and timeless tale of unexpected courage, camaraderie, and the hidden depths found in the smallest of folk.
+cover: ../assets/books/71OF3.webp
