@@ -35,8 +35,6 @@ export const $author = z.object({
 	image: z.string().nonempty().optional(),
 });
 
-// export type Author = z.infer<typeof $author>;
-
 export const $book = z.object({
 	id,
 	title: z.string().nonempty(),
@@ -48,5 +46,3 @@ export const $book = z.object({
 	summary: z.string().nonempty().optional(),
 	cover: z.string().nonempty().optional(),
 });
-
-// export type Book = z.infer<typeof $book>;
