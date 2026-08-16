@@ -17,4 +17,6 @@
 @import './utility/spacing.css' layer(utility);
 @import './utility/visually-hidden.css' layer(utility);
 
+@import './block/card.css' layer(block);
+@import './block/link-card.css' layer(block);
 @import './block/icon.css' layer(block);

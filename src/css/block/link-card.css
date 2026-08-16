@@ -1,0 +1,40 @@
+/**
+ * CLICKABLE CARD
+ * Expands a single internal link's hit target to the whole card.
+ * See https://inclusive-components.design/cards/
+ *
+ * Elements:
+ *   [data-card-target]      - The primary link; hit target expands
+ *   [data-card-interactive] - Keeps an element interactive; sits above main overlay
+ */
+
+.card--link {
+	position: relative;
+
+	[data-card-target] {
+		color: currentColor;
+		text-decoration-line: none;
+	}
+
+	[data-card-target]::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+	}
+
+	[data-card-interactive],
+	a:not([data-card-target]) {
+		position: relative;
+	}
+
+	&:has([data-card-target]:hover) {
+		background: var(--color-surface-raised--hover);
+		border-color: var(--color-border--hover);
+	}
+
+	&:has([data-card-target]:focus-visible) {
+		outline-width: max(2px, 0.15em);
+		outline-style: solid;
+		outline-color: var(--color-border--focus);
+	}
+}

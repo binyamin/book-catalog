@@ -41,6 +41,7 @@
 	--color-neutral-800: hsl(40, 6%, 20%);
 	--color-neutral-900: hsl(40, 5%, 12%);
 	--color-green-200: hsl(150, 25%, 88%);
+	--color-green-400: hsl(150, 32%, 56%);
 	--color-green-600: hsl(150, 38%, 34%);
 	--color-green-700: hsl(150, 42%, 27%);
 	--color-green-800: hsl(150, 45%, 21%);
@@ -49,6 +50,11 @@
 	--color-surface-base: var(--color-neutral-50);
 	--color-text-base: var(--color-neutral-900);
 	--color-text-link: var(--color-green-600);
+	--color-surface-raised: var(--color-neutral-100);
+	--color-surface-raised--hover: var(--color-green-200);
+	--color-border: var(--color-neutral-200);
+	--color-border--hover: var(--color-green-400);
+	--color-border--focus: currentColor;
 
 	--container-l: clamp(20rem, 90vw, 77.5rem);
 	--container-m: clamp(20rem, 90vw, 60rem);

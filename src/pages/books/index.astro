@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BookCover from '~/components/book/cover.astro';
+import Layout from '~/layouts/page.astro';
+import { multisort, sortString, untitle } from '~/lib/collections';
+
+const books = await getCollection('books');
+
+books.sort(multisort([
+	sortString((v) => v.data.author.id.split('-').reverse().join('-')),
+	sortString((v) => untitle(v.data.title)),
+]));
+---
+
+<Layout title="Books">
+	<div class="stack">
+		<h1>Books</h1>
+
+		<ul
+			role="list"
+			class="book-list | grid"
+			style="--stack-gap: var(--space-xs); --grid-item-min: 9rem"
+		>
+			{books.map((b) => (
+				<li
+					class="card card--link | stack | p-2xs"
+					style="--stack-gap: var(--space-2xs)"
+				>
+					<BookCover src={b.data.cover ?? null} />
+
+					<a
+						href={`/books/${b.id}`}
+						data-card-target
+					>{b.data.title}</a>
+				</li>
+			))}
+		</ul>
+	</div>
+</Layout>

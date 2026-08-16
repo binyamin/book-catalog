@@ -1,0 +1,51 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import BookIcon from '~/components/icons/book.svg';
+
+interface Props {
+	src: ImageMetadata | null;
+	class?: string;
+}
+
+const props = Astro.props;
+---
+
+<style>
+	.root {
+		aspect-ratio: 2 / 3;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	img {
+		height: 100%;
+		object-position: center;
+	}
+
+	.placeholder {
+		background-color: var(--color-neutral-400);
+
+		svg {
+			color: var(--color-neutral-200);
+			width: 30%;
+		}
+	}
+</style>
+
+<div
+	class:list={['root', {
+		'placeholder | center': !props.src,
+	}, props.class]}
+>
+	{props.src
+		? (
+		 <Image
+			 src={props.src}
+			 alt=""
+			 loading="lazy"
+			 layout="constrained"
+		 />
+	 )
+		: <BookIcon />}
+</div>
