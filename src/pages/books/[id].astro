@@ -1,0 +1,73 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, getEntry } from 'astro:content';
+import IconLeftArrow from 'microns/svg/arrow-left.svg';
+import BookCover from '~/components/book/cover.astro';
+import Layout from '~/layouts/page.astro';
+
+export const getStaticPaths = (async () => {
+	const books = await getCollection('books');
+
+	return await Promise.all(books.map(async (b) => ({
+		params: {
+			id: b.id,
+		},
+		props: {
+			book: b.data,
+			author: (await getEntry('authors', b.data.author.id))!.data,
+		},
+	})));
+}) satisfies GetStaticPaths;
+
+const { author, book } = Astro.props;
+---
+
+<style>
+	h1 {
+		margin-block-start: var(--space-s);
+	}
+
+	h1 + * {
+		--stack-gap: var(--space-3xs);
+	}
+</style>
+
+<Layout title={book.title}>
+	<div class="py-2xs">
+		<a href="/books"><IconLeftArrow class="icon" /> Back</a>
+	</div>
+
+	<article class="stack">
+		<div class="sidebar" style="--sidebar-width: 14rem">
+			<BookCover src={book.cover ?? null} />
+
+			<div class="stack">
+				<h1>{book.title}</h1>
+
+				<div>
+					<p class="u-font-italic">
+						By {author.name} ({author.birthYear}&ndash;{author.deathYear})
+					</p>
+					<p class="u-font-italic">
+						{book.publicationYear}
+					</p>
+				</div>
+
+				{book.genre
+					&& (
+					 <ul
+						 role="list"
+						 class="cluster"
+						 style="--cluster-gap: var(--space-2xs)"
+					 >
+						 {book.genre?.map(v => <li class="tag">{v}</li>)}
+					 </ul>
+				 )}
+			</div>
+		</div>
+		<section>
+			<h2 class="visually-hidden">Summary</h2>
+			{book.summary?.trim().split(/\n+/).map(v => <p>{v}</p>)}
+		</section>
+	</article>
+</Layout>
